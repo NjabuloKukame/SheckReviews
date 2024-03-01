@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', "Playfair Display";
+}
+
+body {
+    background-image: url('img/pexels-edward-eyer-811838.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100dvh;
+    overflow-x: hidden;
+    background-color: #121212;
+}
+
+
+.header{
+    display: flex;
+    padding: 40px 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.navbar a{
+    position: relative;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-left: 40px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.gold-text{
+    color: #F09C48;
+}
+
+.nav-link:hover{
+    color: #F09C48;
+}
+
+.nav-link::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; 
+    background-color: #F09C48; 
+}
+
+
+.main-content {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 100px;
+}
+
+.text-container h1 {
+    margin: 60px 0;
+    font-size: 55px;
+    color: #FFFFFF;
+}
+
+.text-2 {
+    margin-left: auto;
+    width: fit-content; 
+    padding-left: 400px;
+}
+
+.text-3 {
+    margin-left: auto;
+    width: fit-content; 
+    padding-left: 800px;
+}
+
+.about-section{
+    background-color: #121212;
+    color: #ffffff;
+    padding-top: 10dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+.about-picture img {
+    max-width: 555px; 
+    height: auto; 
+    margin-left: 100px;
+    margin-bottom: 90px;
+    border: 5px solid #F09C48;
+    border-radius: 10px;
+}
+
+.about-picture {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+}
+
+.about-content {
+    flex: 1; 
+    padding-right: 80px;
+}
+
+.about-content h2 {
+    margin-top: 0; 
+    font-size: 35px; 
+}
+
+.gold-line {
+    width: 235px; 
+    height: 5px; 
+    background-color: #F09C48; 
+    margin-bottom: 20px; 
+}
+
+.about-content p {
+    font-size: 25px; 
+}
+
+.footer {
+    background-color: #181818; 
+    padding: 20px; 
+    color: #ffffff; 
+    font-size: 20px; 
+    padding-left: 100px;
+    padding-right: 100px;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.github-icon {
+    font-size: 30px; 
+    color: #ffffff; 
+    margin-right: 10px; 
+}
+
+.review-main-content {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+.review-gold-line {
+    width: 224px;
+    height: 5px;
+    background-color: #F09C48;
+    margin-top: 5px; 
+}
+
+.album-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    width: 405px; 
+    height: 405px; 
+    background-color: transparent; 
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.image_container {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    width: 210px; 
+    height: 210px; 
+    margin: 0 auto; 
+}
+
+.image_container img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; 
+}
+
+.album-details {
+    padding: 10px 0;
+}
+
+.artist-name {
+    font-weight: bold; 
+    font-size: 30px; 
+    margin-bottom: 10px; 
+}
+
+.album-name,
+.release-year,
+.genre {
+    font-weight: 300;
+    font-size: 25px; 
+    margin-top: 8px; 
+}
+
+.card::before {
+    opacity: 0;
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    border-radius: 5px; 
+    box-shadow: 0 0 30px #F09C48; 
+    transition: opacity 300ms;
+}
+  
+.card:hover::before {
+    opacity: 1;
+}
+
+.album-cards-container a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Start Of The Album Review CSS */
+
+.album-review {
+    display: flex;
+    align-items: flex-start; 
+    margin-left: 100px; 
+}
+
+.album-cover {
+    width: 455px; 
+    height: 455px; 
+    margin-right: 20px;
+}
+
+.album-review-heading {
+    font-size: 28px;
+    margin-right: 20px; 
+}
+
+.album-review-main-content{
+    color: #FFFFFF;
+}
+
+.album-gold-line {
+    width: 85px;
+    height: 5px; 
+    background-color: #F09C48; 
+    margin-top: 5px; 
+}
+
+.album-review-name {
+    font-size: 64px; 
+    font-weight: 700; 
+    margin-top: 40px; 
+}
+
+.album-review-artist-name {
+    font-size: 58px; 
+    font-style: italic; 
+    margin-top: 25px; 
+}
+
+.album-review-release-year {
+    font-size: 50px; 
+    margin-top: 25px; 
+    font-weight: 400;
+}
+
+.top-songs {
+    padding-top: 15px;
+}
+
+.top-songs h2 {
+    font-size: 20px; 
+    margin-bottom: 10px; 
+}
+
+.top-songs ul {
+    list-style: none; 
+    padding-left: 0; 
+    
+}
+
+.top-songs li {
+    margin-bottom: 5px; 
+    font-weight: bold;
+}
+
+.album-review {
+    position: relative; 
+    padding-top: 20px;
+}
+
+.album-score {
+    position: absolute; 
+    top: 100px; 
+    right: 200px; 
+}
+
+.score-outline {
+    width: 305px; 
+    height: 305px; 
+    border: 10px solid #F09C48; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-text {
+    font-size: 96px;
+    color: #FFFFFF; 
+    font-weight: bolder;
+}
+
+.genre-labels {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.genre-label {
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFFFFF; 
+    margin-right: 20px; 
+}
+
+.review-section{
+    padding-left: 100px;
+    padding-top: 77px;
+    margin-bottom: 50px;
+}
+
+.review-section h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.review-section-gold-line{
+    width: 155px; 
+    height: 5px; 
+    background-color: #F09C48; 
+    margin-top: 5px; 
+}
+
+.review-section p {
+    font-size: 25px; 
+    color: #FFFFFF; 
+    line-height: 1.6; 
+    margin-top: 20px; 
+    margin-right: 140px;
+    font-weight: 300;
+}
+
+.review-section .review-paragraph {
+    margin-bottom: 50px; 
+}
+
+#searchFormInner {
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid #F09C48;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+#searchButton {
+    background-color: #F09C48;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #896143;
+}
+
+/* Contact Page Styling */
+.contact-main h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.contact-gold-line {
+    width: 255px; 
+    height: 5px; 
+    background-color: #F09C48; 
+    margin-top: 5px; 
+    margin: 0 auto;
+}
+
+.contact-main {
+    text-align: center;
+    padding: 50px;
+    color: #FFFFFF;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 300px; 
+    padding: 10px;
+    margin: 0 auto 10px;
+    border: 4px solid #F09C48;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #121212;
+    font-weight: 700;
+}
+
+textarea {
+    height: 150px; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F09C48;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #FFB566;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+

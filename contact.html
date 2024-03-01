@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheck Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/be5bcf49f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="header">
+
+        <a href="#" class="logo">Sheck <span class="gold-text">Reviews</span></a>
+
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="reviews.html" class="nav-link">Reviews</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+    </header>
+
+    <main class="contact-main">
+        <h1>Contact Us</h1>
+        <div class="contact-gold-line"></div>
+
+        <form action="submit.php" method="post">
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        
+    </main>
+    
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
